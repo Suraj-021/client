@@ -3,10 +3,13 @@ import Layout from "../components/Layout/Layout";
 import Product from "../components/Layout/Product";
 import css from "../CSS/style.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/auth";
 
 const HomePage = () => {
+  const [auth, setAuth] = useAuth();
   return (
     <Layout title={"Agrico - Home"}>
+      <pre>{JSON.stringify(auth, null, 4)}</pre>
       <>
         <div class="header">
           <img src="/IMG/background.jpg" alt=""></img>

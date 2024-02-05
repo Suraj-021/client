@@ -1,6 +1,18 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useAuth } from "../../context/auth";
+import { toast } from "react-toastify";
 const Header = function () {
+  const [auth, setAuth] = useAuth();
+  const handlelogout = () => {
+    setAuth({
+      ...auth,
+      user: null,
+      token: "",
+    });
+    localStorage.removeItem("auth");
+    toast.success("Logout Successfully");
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg  navbar-dark bg-dark sticky-top">
@@ -30,18 +42,33 @@ const Header = function () {
                 </NavLink>
               </li>
 
-              <li className="nav-item px-2">
-                <NavLink to="/Register" className="nav-link">
-                  Register
-                </NavLink>
-              </li>
+              {!auth.user ? (
+                <>
+                  <li className="nav-item px-2">
+                    <NavLink to="/Register" className="nav-link">
+                      Register
+                    </NavLink>
+                  </li>
 
-              <li className="nav-item px-2">
-                <NavLink to="/login" className="nav-link">
-                  Login
-                </NavLink>
-              </li>
-
+                  <li className="nav-item px-2">
+                    <NavLink to="/login" className="nav-link">
+                      Login
+                    </NavLink>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="nav-item px-2">
+                    <NavLink
+                      onClick={handlelogout}
+                      to="/login"
+                      className="nav-link"
+                    >
+                      Logout
+                    </NavLink>
+                  </li>
+                </>
+              )}
               <li className="nav-item px-2">
                 <NavLink to="/Profile" className="nav-link">
                   Profile

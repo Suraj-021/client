@@ -9,7 +9,7 @@ function Register() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [dob, setdob] = useState("");
-  const [phone, setphone] = useState("");
+  const [phoneno, setphone] = useState("");
   const [password, setpassword] = useState("");
   const [address, setaddress] = useState("");
   const navigate = useNavigate();
@@ -19,11 +19,11 @@ function Register() {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/register`,
-        { name, email, dob, phone, password, address }
+        { name, email, dob, phoneno, password, address }
       );
       if (res.data.success) {
         toast.success(res.data.message);
-        navigate("./login");
+        navigate("../login");
       } else {
         toast.error(res.data.message);
       }
@@ -75,8 +75,8 @@ function Register() {
               <label htmlFor="mobile">Phone No. </label>
               <input
                 type="number"
-                name="PhoneNo"
-                value={phone}
+                name="phoneNo"
+                value={phoneno}
                 onChange={(e) => setphone(e.target.value)}
                 placeholder="Enter your Mobile No"
               />

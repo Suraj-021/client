@@ -4,6 +4,7 @@ import "../../CSS/Signin.css";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/auth";
 
 function Login() {
   const [name, setname] = useState("");
@@ -11,15 +12,23 @@ function Login() {
   const [password, setpassword] = useState("");
   const navigate = useNavigate();
 
+  const [auth, setAuth] = useAuth();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API} /api/v1/auth/login`,
+        `${process.env.REACT_APP_API}/api/v1/auth/login`,
         { name, email, password }
       );
       if (res.data.success) {
-        toast.success(res.data.message);
+        toast.success(res.data && res.data.message);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        localStorage.setItem("auth", JSON.stringify(res.data));
         navigate("/");
       } else {
         toast.error(res.data.message);
@@ -29,7 +38,6 @@ function Login() {
       toast.error("something Went Wrong");
     }
   };
-  console.log(process.env.REACT_APP_API);
   return (
     <>
       <Layout title={"login"}>

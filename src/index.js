@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom"; //For Creating Single Page Application
 import reportWebVitals from "./reportWebVitals";
+import { Authprovider } from "./context/auth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Authprovider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Authprovider>
 );
 
 reportWebVitals();
