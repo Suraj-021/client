@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 const Header = function () {
   return (
     <>
-      <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg  navbar-dark bg-dark sticky-top">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
             Agrico
@@ -15,7 +15,7 @@ const Header = function () {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 px-5">
               <li className="nav-item px-2">
                 <NavLink to="/" className="nav-link ">
-                  Home
+                  🏡Home
                 </NavLink>
               </li>
 
@@ -26,7 +26,7 @@ const Header = function () {
               </li>
               <li className="nav-item px-2">
                 <NavLink to="/Contact" className="nav-link">
-                  Contact
+                  ☎️Contact
                 </NavLink>
               </li>
 

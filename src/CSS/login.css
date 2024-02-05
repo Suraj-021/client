@@ -1,0 +1,89 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    color: rgb(241, 237, 237);
+    background: #1c1b19f1;
+    border: 3px solid;
+    background: no-repeat;
+    border-radius: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+
+.container {
+    padding: 1.3rem;
+    margin: 1.2rem;
+    border-radius: 25px;
+    background-color: #18c23a1f;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin: 11px auto;
+    padding: 1px;
+    display: block;
+    width: 100%;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    transform: scale(1.05);
+}
+
+label {
+    font-size: 1.3rem;
+    /* font-weight: bold; */
+    color: white;
+}
+
+button {
+    color: white;
+    font-family: cursive;
+    margin: 0px 9px;
+    padding: 4px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#Login {
+    position: relative;
+    left: 30%;
+    margin: 1.2rem;
+    background-color: #1976D2;
+}
+
+#Login:hover{
+    background-color: #1976d28c;
+    color: black;
+}
+
+#Signin {
+    font-size: 10px;
+    background-color: #956344;
+}
+
+#Signin:hover{
+    background-color: #95634496;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

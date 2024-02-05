@@ -1,0 +1,364 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+}
+
+.header {
+    position: relative;
+    height: 500px; /* Set the height of the header to the height of the image */
+  }
+  
+  .header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Set the image to cover the header */
+  }
+  
+  .header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Set the z-index to a higher value than the image */
+  }
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 13px;
+}
+
+.navbar ul li a {
+    font-size: 1.2rem;
+    padding: 1rem 1.3rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar input:focus{
+    outline: none;
+}
+
+.navbar ul li a:hover {
+    color: rgb(39, 36, 36);
+}
+
+.navbar img {
+    height: 3rem;
+    width: 4rem;
+    border-radius: 100%;
+}
+
+.navbar input {
+    width: 26rem;
+    height: 2rem;
+    margin: 6px;
+    border-radius: 14px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Login Popup css */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(7 7 7 / 79%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  iframe {
+    border: none;
+    width: 500px;
+    height: 600px;
+  }
+  
+  #Login-button{
+    color: white;
+    font-size: 1.1rem;
+    font-family: auto;
+    border: none;
+    background: none;
+  }
+
+  #Login-button:hover {
+    color: rgb(39, 36, 36);
+}
+
+.caroulsel{
+    display: flex;
+    padding: 1.01rem 1.8rem;
+    padding-bottom: 0%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.caroulsel a img{
+    width: 100px;
+}
+
+.products{
+    text-align: center;
+    margin: 1.05rem;
+}
+
+.product_img{
+    background-color: #e5e5e578;
+    padding: 0.4rem;
+    border-radius: 100%;
+}
+
+.product_img:hover{
+    transform: scale(1.09);
+    box-shadow: 0px 3px 6px 3px #9f9d9d78;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+}
+.product_headding{
+    margin-top: 0.01rem;
+}
+
+/* Utility */
+.hedding {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    /* color: white; */
+}
+
+.secondary {
+    color: black;
+}
+
+.primary {
+    font-size: 2rem;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-body:hover{
+    background-color: #80808040;
+    border-radius: 7px;
+}
+
+.img-fluid{
+    height: 200px;
+}
+
+.caroulsel a img{
+    height: 100px;
+}
+/* Intro Background */
+
+.intro img{
+    width: 100%;
+    height: 50%;
+}
+
+.intro{
+    margin-bottom: 0%;
+}
+/* section */
+
+.carousel_container{
+    height: 40%;
+}
+#service-section {
+    background-color: #f5deb369;
+    border: 2px solid #c2cec257;
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+}
+
+.service_h2 {
+    margin-top: 1.2rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 6px;
+    background-color: #cdd3d93d;
+}
+
+.box:hover{
+    transform: scale(1.06);
+}
+.box img {
+    height: 165px;
+    width: 140px;
+}
+
+.box p {
+    text-align: center;
+    padding: 5px;
+    color: red;
+}
+
+.service-btn {
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    padding: 5px;
+    margin: 2px auto;
+}
+
+.service-btn:hover{
+    background-color: rgba(214, 24, 24, 0.68);
+}
+.Buy_btn{
+    background-color: #0beed8;
+    color: white;
+}
+.Buy_btn:hover{
+    background-color: #0beed75a;
+}
+.Cart_btn{
+    background-color: rgb(18 165 245);
+    color: #ffffff;
+}
+
+.Cart_btn:hover{
+    background-color: rgba(18, 166, 245, 0.587);
+}
+/* Why Fitness Agrico */
+.Why {
+    background: #ff0000c7;
+    color: white;
+    border: 2px solid red;
+}
+
+.why_Cointener {
+    display: grid;
+    /* border: 2px solid; */
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+}
+
+.why_box {
+    /* border: 2px solid; */
+    width: auto;
+    height: auto;
+    margin: 1.5rem;
+}
+
+.why_h2 {
+    margin-top: 1.2rem;
+}
+
+.why_h3 {
+    color: white;
+}
+
+.why_box p {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Footer CSS */
+footer {
+    background-color: #008000;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_box {
+    margin: auto;
+}
+
+.footer_box ul {
+    list-style: none;
+}
+
+.footer_box ul li {
+    padding: 0.2rem;
+    margin: 0.5rem;
+    margin-bottom: 0%;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer_img ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0%;
+}
+
+.footer_img img {
+    height: 60px;
+    cursor: pointer;
+}
+
+.footer_img img:hover{
+    transform: scale(1.06);
+}
+
+/* CSS for fully Responsive website  */
+@media screen and (max-width : 1089px){
+    .navbar ul li a {
+        padding: 1rem 0.5rem;
+    }
+} 
+@media screen and (max-width : 645px){
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .service{
+        flex-direction: column;
+    }
+    .why_Cointener{
+        grid-auto-flow: column;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width : 430px){
+    .navbar input{
+        width: 50%;
+    }
+}
+@media screen and (max-width : 300px){
+    .agrico ul{
+        flex-direction: column;
+    }
+    .agrico img{
+        width: 50%;
+    }
+}

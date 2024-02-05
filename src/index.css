@@ -8,7 +8,7 @@
 .navbar{
   font-size: 15px;
   text-transform: uppercase;
-  line-height: 25px;
+  line-height: 0px;
   box-shadow:0 8px 6px -6px gray ;
   border-bottom: 0.5px solid gray !important;
 }
@@ -20,8 +20,10 @@
 .footer {
     /* color: white !important; */
     background-color: rgba(33, 37, 41, 1);
+    padding: 0%;
 }
 
 .footer-link{
   color: white !important;
+  margin-bottom: 0.5rem;
 }

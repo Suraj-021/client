@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.register {
+  color: rgb(241, 237, 237);
+  margin: auto;
+  margin-top: 1.5rem;
+  width: 50%;
+  border: 2px solid;
+  border-radius: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #1976D2;
+  color: white;
+  font-family: cursive;
+  margin: 0px 9px;
+  padding: 4px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1976d294;
+}
+
+.info {
+  padding: 1.5rem;
+  background-color: #18c23a1f;
+  border-radius: 25px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.in input {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 1px;
+  border: none;
+  margin: 11px auto;
+  font-size: 20px;
+  border-radius: 7px;
+}
+
+/* CSS for outline border */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  outline: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover {
+  transform: scale(1.05);
+}
+
+.Submit_btn {
+  position: relative;
+  left: 38%;
+}
+
+
+label {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0.5rem;
+  color: black;
+}

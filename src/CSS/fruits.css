@@ -1,0 +1,40 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.card{
+    margin: 0.6rem;
+    background-color: whitesmoke;
+}
+
+
+.product_card{
+    padding: 1.3rem;
+}
+.navbar{
+    background-color: green;
+}
+
+.feature_box{
+    /* padding: 7% 15%; */
+    text-align: center;
+}
+
+.feature_box-img{
+    width: 150px;
+    height: 150px;
+}
+
+.product_card_img{
+    text-align: center;
+}
+
+.product_card_img img{
+    width: 300px;
+    height: 300px;
+}
+
+.img-fluid{
+    height: 200px;
+}
