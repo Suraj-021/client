@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import "../../CSS/Signin.css";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 
 function Login() {
@@ -11,6 +11,7 @@ function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [auth, setAuth] = useAuth();
 
@@ -29,7 +30,7 @@ function Login() {
           token: res.data.token,
         });
         localStorage.setItem("auth", JSON.stringify(res.data));
-        navigate("/");
+        navigate(location.state || "/");
       } else {
         toast.error(res.data.message);
       }
